@@ -1,292 +1,50 @@
-/* style.css - CAFAB - VERSÃO RESPONSIVA ATUALIZADA */
+/* style.css - CAFAB (RESTAURADO) */
 
-/* ================= CONFIGURAÇÕES GERAIS ================= */
+body{font-family:'Montserrat', sans-serif;background:#ffffff;color:#333;overflow-x:hidden;margin:0;}
+img{max-width:100%;height:auto;}
+.custom-padding{padding-left:3% !important;padding-right:3% !important;}
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background: #ffffff;
-    color: #333;
-    overflow-x: hidden;
-    margin: 0;
-}
+header{position:sticky;top:0;z-index:9999;background:#ffffff;}
+.top-bar{background:#f8f9fa;border-bottom:1px solid #e7e7e7;padding:8px 0;}
+.list-redes{margin:0;padding-top:5px;}
+.list-redes a{color:#238E68 !important;} /* COR VERDE MANTIDA */
+.animar-salto{display:inline-block;transition:transform .3s ease;}
+.animar-salto:hover{transform:translateY(-4px);text-decoration:none;}
+.btn-fale{background:#238E68;color:#fff !important;font-weight:bold;border-radius:4px;border:none;}
+.btn-fale:hover{background:#1e7a5a;}
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+.menu-site{background:#fff;border:none;margin-bottom:0;}
+.menu-site ul li a{color:#333;font-weight:700;text-transform:uppercase;font-size:14px;padding:15px 20px;transition:.3s;}
+.menu-site ul li a:hover, .menu-site ul li a.ativo{color:#238E68;background:transparent;}
+.menu-site ul li a.ativo{border-bottom:3px solid #238E68;}
 
-.custom-padding {
-    padding-left: 3% !important;
-    padding-right: 3% !important;
-}
+/* A FAIXA DA UEMA COM A IMAGEM DE FUNDO QUE VOCÊ GOSTA */
+h2.titulo{background:url("https://www.uema.br/wp-content/themes/temauema/images/background-titulos.jpg") left center repeat-x;margin-top:20px;margin-bottom:30px;font-size:24px;line-height:1.2;}
+h2.titulo span{font-weight:bold;padding:8px 20px 8px 0;display:inline-flex;align-items:center;background:#ffffff;color:#238E68;}
+h2.titulo span::before{content:"";width:8px;height:30px;background:#238E68;margin-right:12px;display:inline-block;}
 
-/* ================= HEADER FIXO ================= */
+/* RODAPÉ VERDE */
+footer{background:#238E68;color:#fff;padding:40px 0;margin-top:50px;}
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    background: #ffffff;
-}
-
-/* ================= BARRA SUPERIOR ================= */
-
-.top-bar {
-    background: #f8f9fa;
-    border-bottom: 1px solid #e7e7e7;
-    padding: 8px 0;
-}
-
-.list-redes {
-    margin: 0;
-    padding-top: 5px;
-}
-
-.list-redes a {
-    color: #238E68 !important;
-}
-
-.animar-salto {
-    display: inline-block;
-    transition: transform .3s ease;
-}
-
-.animar-salto:hover {
-    transform: translateY(-4px);
-    text-decoration: none;
-}
-
-/* botão fale conosco */
-
-.btn-fale {
-    background: #238E68;
-    color: #fff !important;
-    font-weight: bold;
-    border-radius: 4px;
-    border: none;
-}
-
-.btn-fale:hover {
-    background: #1e7a5a;
-}
-
-/* ================= MENU (DESKTOP) ================= */
-
-.menu-site {
-    background: #fff;
-    border: none;
-    margin-bottom: 0;
-}
-
-.menu-site ul li a {
-    color: #333;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 14px;
-    padding: 15px 20px;
-    transition: .3s;
-}
-
-.menu-site ul li a:hover,
-.menu-site ul li a.ativo {
-    color: #238E68;
-    background: transparent;
-}
-
-.menu-site ul li a.ativo {
-    border-bottom: 3px solid #238E68;
-}
-
-/* Esconde os elementos de celular no Desktop */
-.header-mobile-exclusivo, #menu-principal-mobile {
-    display: none;
-}
-
-/* ================= FAIXA UEMA ================= */
-
-h2.titulo {
-    background: url("https://www.uema.br/wp-content/themes/temauema/images/background-titulos.jpg") left center repeat-x;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-size: 24px;
-    line-height: 1.2;
-}
-
-h2.titulo span {
-    font-weight: bold;
-    padding: 8px 20px 8px 0;
-    display: inline-flex;
-    align-items: center;
-    background: #ffffff;
-    color: #238E68;
-}
-
-h2.titulo span::before {
-    content: "";
-    width: 8px;
-    height: 30px;
-    background: #238E68;
-    margin-right: 12px;
-    display: inline-block;
-}
-
-/* ================= CARDS DE NOTÍCIAS ================= */
-
-.card-noticia {
-    border: none;
-    background: #fff;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: .3s;
-    margin-bottom: 30px;
-}
-
-.card-noticia:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.card-noticia img {
-    width: 100%;
-    display: block;
-}
-
-.card-noticia h3 {
-    font-size: 16px;
-    line-height: 1.4;
-    font-weight: bold;
-    padding: 10px;
-    margin: 0;
-}
-
-.card-noticia h3 a {
-    color: #333;
-    text-decoration: none;
-}
-
-.card-noticia h3 a:hover {
-    color: #238E68;
-}
-
-.data-noticia {
-    color: #238E68;
-    font-weight: bold;
-    font-size: 14px;
-    text-align: center;
-    padding: 5px;
-}
-
-/* ================= RODAPÉ ================= */
-
-footer {
-    background: #238E68;
-    color: #fff;
-    padding: 40px 0;
-    margin-top: 50px;
-}
-
-footer p {
-    margin-bottom: 5px;
-}
-
-/* ================= NOVO RESPONSIVO (CELULAR) ================= */
-
+/* AJUSTES PARA O CELULAR - SEM ESTRAGAR O RESTO */
 @media (max-width: 768px) {
-    /* Esconde o menu original do PC */
-    .row-desktop-original {
-        display: none !important;
-    }
-
-    /* Mostra e configura a barra do celular */
-    .header-mobile-exclusivo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px;
-        background: #fff;
-        border-bottom: 1px solid #eee;
-    }
-
-    .logo-mobile img {
-        max-height: 45px; /* Tamanho da logo no celular */
-    }
-
-    .btn-mobile-home, .btn-mobile-menu {
-        background: none;
-        border: none;
-        font-size: 22px;
-        color: #238E68;
-        cursor: pointer;
-        padding: 5px;
-    }
-
-    /* Menu Translúcido (Caixa que sai para fora) */
-    #menu-principal-mobile {
-        display: none; /* Escondido por padrão */
-        flex-direction: column;
+    .row-main-nav { display: none !important; } /* Esconde a linha do PC */
+    .mobile-nav-toggle { display: flex !important; } /* Mostra a barra do Celular */
+    
+    /* Menu Translúcido que sai para fora */
+    .nav-links-custom.menu-aberto-mobile {
+        display: flex !important;
+        flex-direction: column !important;
         position: absolute;
-        top: 60px; /* Ajuste conforme a altura da sua logo */
-        left: 5%;
-        right: 5%;
-        background: rgba(255, 255, 255, 0.96); /* Translúcido */
-        backdrop-filter: blur(10px); /* Desfoque de fundo */
+        top: 60px; left: 5%; right: 5%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
         border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: 15px;
+        border-radius: 10px;
+        padding: 10px;
         z-index: 10000;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        list-style: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-
-    /* Classe ativada pelo JavaScript */
-    #menu-principal-mobile.aberto {
-        display: flex;
-    }
-
-    #menu-principal-mobile li {
-        text-align: center;
-        margin: 5px 0;
-        border-bottom: 1px solid #f0f0f0;
-    }
-
-    #menu-principal-mobile li:last-child {
-        border-bottom: none;
-    }
-
-    #menu-principal-mobile li a {
-        display: block;
-        padding: 12px;
-        color: #333;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 13px;
-        text-decoration: none;
-    }
-
-    #menu-principal-mobile li a:hover {
-        color: #238E68;
-    }
-
-    /* Ajustes Gerais de Conteúdo no Celular */
-    .data-noticia {
-        text-align: center;
-        border-top: 2px solid #eee;
-        margin-top: 10px;
-        padding-top: 5px;
-    }
-
-    footer .text-right {
-        text-align: center !important;
-        margin-top: 15px;
-    }
-
-    h2.titulo {
-        font-size: 18px;
-        background-position: center;
-    }
-
-    h2.titulo span {
-        padding-right: 10px;
-    }
+    .nav-links-custom.menu-aberto-mobile li { text-align: center; border-bottom: 1px solid #eee; width: 100%; }
+    .nav-links-custom.menu-aberto-mobile li a { padding: 10px !important; display: block; }
 }
