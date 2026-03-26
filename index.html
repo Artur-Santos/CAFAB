@@ -66,6 +66,60 @@ padding-left:10px;
 line-height:1.2;
 }
 
+/* MENU MOBILE */
+
+.menu-mobile{
+position:sticky;
+top:0;
+z-index:999;
+background:white;
+}
+
+.logo-centro img{
+max-height:70px;
+}
+
+.icone-home{
+position:absolute;
+left:15px;
+top:20px;
+font-size:22px;
+color:#238E68;
+}
+
+.menu-toggle{
+border:none;
+background:none;
+position:absolute;
+right:15px;
+top:15px;
+}
+
+.menu-toggle .icon-bar{
+background:#238E68;
+width:25px;
+height:3px;
+margin:4px 0;
+}
+
+@media (max-width:768px){
+
+.logo-centro{
+width:100%;
+text-align:center;
+}
+
+.logo-centro img{
+margin:auto;
+display:block;
+}
+
+.navbar-nav{
+text-align:center;
+}
+
+}
+
 </style>
 
 </head>
@@ -97,21 +151,33 @@ line-height:1.2;
 </div>
 </div>
 
-<nav class="navbar menu-site">
+<nav class="navbar menu-site menu-mobile">
 
 <div class="container">
 
-<div class="row" style="display:flex;align-items:center;padding:15px 0;">
+<div class="navbar-header">
 
-<div class="col-md-3">
-<a href="index.html">
-<img src="logo.png" alt="Logo CAFAB" style="max-width:100%; height:auto;">
+<a class="icone-home visible-xs" href="index.html">
+<i class="fas fa-home"></i>
 </a>
+
+<a class="navbar-brand logo-centro" href="index.html">
+<img src="logo.png" alt="Logo CAFAB">
+</a>
+
+<button type="button" class="navbar-toggle menu-toggle" data-toggle="collapse" data-target="#menuPrincipal">
+
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+
+</button>
+
 </div>
 
-<div class="col-md-9 text-right">
+<div class="collapse navbar-collapse" id="menuPrincipal">
 
-<ul class="nav navbar-nav navbar-right" style="flex-direction:row;display:flex;">
+<ul class="nav navbar-nav navbar-right">
 
 <li><a href="index.html" class="ativo">Home</a></li>
 <li><a href="sobre.html">Sobre o CAFAB</a></li>
@@ -120,8 +186,6 @@ line-height:1.2;
 <li><a href="documentos.html">Documentos úteis</a></li>
 
 </ul>
-
-</div>
 
 </div>
 
