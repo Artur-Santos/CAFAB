@@ -1,216 +1,292 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CAFAB - Centro Acadêmico Frei Alberto Beretta</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Seus estilos internos permanecem aqui */
-        .thumbnail.editais {
-            border: 1px solid #ddd;
-            border-top: 4px solid #238E68;
-            transition: all .3s;
-            padding: 15px;
-            margin-bottom: 30px;
-            background: #fff;
-            min-height: 160px;
-        }
-        .thumbnail.editais:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .thumbnail.editais h3 {
-            font-size: 14px;
-            font-weight: bold;
-            line-height: 1.4;
-            margin-top: 10px;
-        }
-        .thumbnail.editais h3 a {
-            color: #333;
-            text-decoration: none;
-        }
-        .thumbnail.editais h3 a:hover {
-            color: #238E68;
-        }
-        .categoria-noticia a {
-            color: #888;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .data-noticia {
-            color: #238E68;
-            font-weight: bold;
-            text-align: right;
-            border-left: 1px solid #ddd;
-            padding-left: 10px;
-            line-height: 1.2;
-        }
+/* style.css - CAFAB - VERSÃO RESPONSIVA ATUALIZADA */
 
-        /* ESTILO AUXILIAR PARA O MENU MOBILE (Caso queira testar antes de por no style.css) */
-        .header-mobile-exclusivo { display: none; }
-        @media (max-width: 767px) {
-            .row-desktop-original { display: none !important; }
-            .header-mobile-exclusivo {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px 15px;
-                background: #fff;
-            }
-            .btn-mobile-home, .btn-mobile-menu {
-                background: none; border: none; font-size: 22px; color: #238E68;
-            }
-            .logo-mobile img { max-height: 45px; }
-            #menu-principal-mobile {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 120px; left: 5%; right: 5%;
-                background: rgba(255, 255, 255, 0.96);
-                backdrop-filter: blur(10px);
-                border-radius: 10px;
-                padding: 15px;
-                z-index: 1000;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-                list-style: none;
-            }
-            #menu-principal-mobile.aberto { display: flex; }
-            #menu-principal-mobile li { margin: 10px 0; text-align: center; border-bottom: 1px solid #eee; }
-            #menu-principal-mobile li a { color: #333; font-weight: bold; text-decoration: none; display: block; padding: 10px; }
-        }
-    </style>
-</head>
-<body>
+/* ================= CONFIGURAÇÕES GERAIS ================= */
 
-<header>
-    <div class="top-bar">
-        <div class="container-fluid custom-padding">
-            <div class="row">
-                <div class="col-md-6 col-xs-6">
-                    <ul class="list-inline list-redes">
-                        <li><a href="#" class="animar-salto"><i class="fab fa-instagram fa-2x"></i></a></li>
-                        <li><a href="#" class="animar-salto"><i class="fab fa-twitter-square fa-2x"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-xs-6 text-right">
-                    <a href="mailto:contato@cafav.uema.br" class="btn btn-sm btn-fale animar-salto">Fale Conosco</a>
-                </div>
-            </div>
-        </div>
-    </div>
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #333;
+    overflow-x: hidden;
+    margin: 0;
+}
 
-    <nav class="navbar menu-site">
-        <div class="container">
-            <div class="header-mobile-exclusivo">
-                <a href="index.html" class="btn-mobile-home"><i class="fas fa-home"></i></a>
-                <div class="logo-mobile">
-                    <img src="logo.png" alt="Logo CAFAB">
-                </div>
-                <button class="btn-mobile-menu" id="botao-hamburguer">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-            <ul id="menu-principal-mobile">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre o CAFAB</a></li>
-                <li><a href="diretoria.html">Diretoria</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="documentos.html">Documentos úteis</a></li>
-            </ul>
+.custom-padding {
+    padding-left: 3% !important;
+    padding-right: 3% !important;
+}
 
-            <div class="row row-desktop-original" style="display:flex;align-items:center;padding:15px 0;">
-                <div class="col-md-3">
-                    <a href="index.html"><img src="logo.png" alt="Logo CAFAB" style="max-width:100%; height:auto;"></a>
-                </div>
-                <div class="col-md-9 text-right">
-                    <ul class="nav navbar-nav navbar-right" style="flex-direction:row;display:flex;">
-                        <li><a href="index.html" class="ativo">Home</a></li>
-                        <li><a href="sobre.html">Sobre o CAFAB</a></li>
-                        <li><a href="diretoria.html">Diretoria</a></li>
-                        <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="documentos.html">Documentos úteis</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+/* ================= HEADER FIXO ================= */
 
-    <div class="container">
-        <h2 class="titulo"><span><a href="noticias.html" style="color:inherit;text-decoration:none;">ÚLTIMAS NOTÍCIAS E AVISOS</a></span></h2>
-    </div>
-</header>
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #ffffff;
+}
 
-<section class="noticias">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="thumbnail editais">
-                    <div class="categoria-noticia"><small><a href="#">Eventos</a></small></div>
-                    <div class="row">
-                        <div class="col-md-9 col-xs-9"><h3><a href="#">ABERTURA DE INSCRIÇÕES PARA A SEMANA DA ENFERMAGEM</a></h3></div>
-                        <div class="col-md-3 col-xs-3 data-noticia">25<br><small>MAR</small></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="thumbnail editais">
-                    <div class="categoria-noticia"><small><a href="#">Campanhas</a></small></div>
-                    <div class="row">
-                        <div class="col-md-9 col-xs-9"><h3><a href="#">CAMPANHA DE DOAÇÃO DE SANGUE ORGANIZADA PELO CAFAB</a></h3></div>
-                        <div class="col-md-3 col-xs-3 data-noticia">20<br><small>MAR</small></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="thumbnail editais">
-                    <div class="categoria-noticia"><small><a href="#">Avisos</a></small></div>
-                    <div class="row">
-                        <div class="col-md-9 col-xs-9"><h3><a href="#">ATA DA ÚLTIMA REUNIÃO DISPONÍVEL PARA CONSULTA</a></h3></div>
-                        <div class="col-md-3 col-xs-3 data-noticia">18<br><small>MAR</small></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+/* ================= BARRA SUPERIOR ================= */
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p><strong>CAFAB - Centro Acadêmico Frei Alberto Beretta</strong></p>
-                <p>Universidade Estadual do Maranhão - UEMA</p>
-                <p>Grajaú - MA</p>
-            </div>
-            <div class="col-md-6 text-right">
-                <p>E-mail: contato@cafav.uema.br</p>
-                <p>Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </div>
-</footer>
+.top-bar {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 8px 0;
+}
 
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+.list-redes {
+    margin: 0;
+    padding-top: 5px;
+}
 
-<script>
-    document.getElementById('botao-hamburguer').onclick = function() {
-        var menu = document.getElementById('menu-principal-mobile');
-        if (menu.classList.contains('aberto')) {
-            menu.classList.remove('aberto');
-        } else {
-            menu.classList.add('aberto');
-        }
-    };
-</script>
+.list-redes a {
+    color: #238E68 !important;
+}
 
-</body>
-</html>
+.animar-salto {
+    display: inline-block;
+    transition: transform .3s ease;
+}
+
+.animar-salto:hover {
+    transform: translateY(-4px);
+    text-decoration: none;
+}
+
+/* botão fale conosco */
+
+.btn-fale {
+    background: #238E68;
+    color: #fff !important;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+}
+
+.btn-fale:hover {
+    background: #1e7a5a;
+}
+
+/* ================= MENU (DESKTOP) ================= */
+
+.menu-site {
+    background: #fff;
+    border: none;
+    margin-bottom: 0;
+}
+
+.menu-site ul li a {
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px 20px;
+    transition: .3s;
+}
+
+.menu-site ul li a:hover,
+.menu-site ul li a.ativo {
+    color: #238E68;
+    background: transparent;
+}
+
+.menu-site ul li a.ativo {
+    border-bottom: 3px solid #238E68;
+}
+
+/* Esconde os elementos de celular no Desktop */
+.header-mobile-exclusivo, #menu-principal-mobile {
+    display: none;
+}
+
+/* ================= FAIXA UEMA ================= */
+
+h2.titulo {
+    background: url("https://www.uema.br/wp-content/themes/temauema/images/background-titulos.jpg") left center repeat-x;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+h2.titulo span {
+    font-weight: bold;
+    padding: 8px 20px 8px 0;
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff;
+    color: #238E68;
+}
+
+h2.titulo span::before {
+    content: "";
+    width: 8px;
+    height: 30px;
+    background: #238E68;
+    margin-right: 12px;
+    display: inline-block;
+}
+
+/* ================= CARDS DE NOTÍCIAS ================= */
+
+.card-noticia {
+    border: none;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: .3s;
+    margin-bottom: 30px;
+}
+
+.card-noticia:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-noticia img {
+    width: 100%;
+    display: block;
+}
+
+.card-noticia h3 {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0;
+}
+
+.card-noticia h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.card-noticia h3 a:hover {
+    color: #238E68;
+}
+
+.data-noticia {
+    color: #238E68;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+}
+
+/* ================= RODAPÉ ================= */
+
+footer {
+    background: #238E68;
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* ================= NOVO RESPONSIVO (CELULAR) ================= */
+
+@media (max-width: 768px) {
+    /* Esconde o menu original do PC */
+    .row-desktop-original {
+        display: none !important;
+    }
+
+    /* Mostra e configura a barra do celular */
+    .header-mobile-exclusivo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+    }
+
+    .logo-mobile img {
+        max-height: 45px; /* Tamanho da logo no celular */
+    }
+
+    .btn-mobile-home, .btn-mobile-menu {
+        background: none;
+        border: none;
+        font-size: 22px;
+        color: #238E68;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    /* Menu Translúcido (Caixa que sai para fora) */
+    #menu-principal-mobile {
+        display: none; /* Escondido por padrão */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajuste conforme a altura da sua logo */
+        left: 5%;
+        right: 5%;
+        background: rgba(255, 255, 255, 0.96); /* Translúcido */
+        backdrop-filter: blur(10px); /* Desfoque de fundo */
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 15px;
+        z-index: 10000;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        list-style: none;
+    }
+
+    /* Classe ativada pelo JavaScript */
+    #menu-principal-mobile.aberto {
+        display: flex;
+    }
+
+    #menu-principal-mobile li {
+        text-align: center;
+        margin: 5px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    #menu-principal-mobile li:last-child {
+        border-bottom: none;
+    }
+
+    #menu-principal-mobile li a {
+        display: block;
+        padding: 12px;
+        color: #333;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 13px;
+        text-decoration: none;
+    }
+
+    #menu-principal-mobile li a:hover {
+        color: #238E68;
+    }
+
+    /* Ajustes Gerais de Conteúdo no Celular */
+    .data-noticia {
+        text-align: center;
+        border-top: 2px solid #eee;
+        margin-top: 10px;
+        padding-top: 5px;
+    }
+
+    footer .text-right {
+        text-align: center !important;
+        margin-top: 15px;
+    }
+
+    h2.titulo {
+        font-size: 18px;
+        background-position: center;
+    }
+
+    h2.titulo span {
+        padding-right: 10px;
+    }
+}
