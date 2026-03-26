@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Notícias - CAFAB</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.thumbnail.editais{
+border:1px solid #ddd;
+border-top:4px solid #238E68;
+transition:all 0.3s ease;
+min-height:180px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+background:#fff;
+padding:15px;
+margin-bottom:30px;
+}
+
+.thumbnail.editais:hover{
+transform:translateY(-5px);
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.thumbnail.editais h3{
+font-size:14px;
+font-weight:bold;
+margin-top:10px;
+line-height:1.4;
+}
+
+.thumbnail.editais h3 a{
+color:#333;
+text-decoration:none;
+}
+
+.thumbnail.editais h3 a:hover{
+color:#238E68;
+}
+
+.data-noticia{
+color:#238E68;
+font-weight:bold;
+text-align:right;
+border-left:1px solid #ddd;
+padding-left:10px;
+line-height:1.2;
+}
+
+.categoria-noticia a{
+color:#888;
+text-transform:uppercase;
+font-size:11px;
+letter-spacing:1px;
+}
+
+.pagination>.active>span{
+background:#238E68!important;
+border-color:#238E68!important;
+}
+
+.pagination>li>a{
+color:#238E68;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="top-bar">
+<div class="container-fluid custom-padding">
+
+<div class="row">
+
+<div class="col-md-6 col-xs-6">
+
+<ul class="list-inline list-redes">
+<li><a href="#" class="animar-salto"><i class="fab fa-instagram fa-2x"></i></a></li>
+<li><a href="#" class="animar-salto"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+</ul>
+
+</div>
+
+<div class="col-md-6 col-xs-6 text-right">
+<a href="mailto:contato@cafav.uema.br" class="btn btn-sm btn-fale animar-salto">Fale Conosco</a>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<nav class="navbar menu-site">
+
+<div class="container">
+
+<div class="row" style="display:flex;align-items:center;padding:15px 0;">
+
+<div class="col-md-3">
+<a href="index.html">
+<img src="logo.png" alt="Logo CAFAB" style="max-width:100%;">
+</a>
+</div>
+
+<div class="col-md-9 text-right">
+
+<ul class="nav navbar-nav navbar-right" style="flex-direction:row;display:flex;">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="sobre.html">Sobre o CAFAB</a></li>
+<li><a href="diretoria.html">Diretoria</a></li>
+<li><a href="eventos.html">Eventos</a></li>
+<li><a href="noticias.html" class="ativo">Notícias</a></li>
+<li><a href="documentos.html">Documentos úteis</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<h2 class="titulo">
+<span>NOTÍCIAS E EDITAIS</span>
+</h2>
+
+</div>
+
+</header>
+
+<section style="padding-bottom:60px;min-height:60vh;">
+
+<div class="container">
+
+<div class="row" style="margin-top:30px;">
+
+<div class="col-md-4 col-sm-6">
+<div class="thumbnail editais">
+
+<div class="categoria-noticia">
+<small><a href="#">Editais</a> / <a href="#">Em andamento</a></small>
+</div>
+
+<div class="row" style="margin-top:10px;">
+
+<div class="col-md-9 col-xs-9">
+<h3><a href="#">SELEÇÃO DE MONITORES PARA O LABORATÓRIO DE ENFERMAGEM 2026</a></h3>
+</div>
+
+<div class="col-md-3 col-xs-3 data-noticia">
+26<br><small>MAR</small>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="col-md-4 col-sm-6">
+<div class="thumbnail editais">
+
+<div class="categoria-noticia">
+<small><a href="#">Resultados</a> / <a href="#">Finalizado</a></small>
+</div>
+
+<div class="row" style="margin-top:10px;">
+
+<div class="col-md-9 col-xs-9">
+<h3><a href="#">RESULTADO FINAL DA ELEIÇÃO PARA A DIRETORIA DO CAFAB - BIÊNIO 2026/2027</a></h3>
+</div>
+
+<div class="col-md-3 col-xs-3 data-noticia">
+25<br><small>MAR</small>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="col-md-4 col-sm-6">
+<div class="thumbnail editais">
+
+<div class="categoria-noticia">
+<small><a href="#">Eventos</a> / <a href="#">Inscrições</a></small>
+</div>
+
+<div class="row" style="margin-top:10px;">
+
+<div class="col-md-9 col-xs-9">
+<h3><a href="#">ABERTURA DE INSCRIÇÕES PARA A SEMANA DA ENFERMAGEM UEMA GRAJAÚ</a></h3>
+</div>
+
+<div class="col-md-3 col-xs-3 data-noticia">
+24<br><small>MAR</small>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="text-center">
+
+<ul class="pagination">
+
+<li class="active"><span>1</span></li>
+<li><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">»</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<footer style="background-color:#238E68;color:white;padding:40px 0;margin-top:50px;">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-6">
+<p><strong>CAFAB - Centro Acadêmico Frei Alberto Beretta</strong></p>
+<p>Universidade Estadual do Maranhão - UEMA</p>
+<p>Grajaú - MA</p>
+</div>
+
+<div class="col-md-6 text-right">
+<p>E-mail: contato@cafav.uema.br</p>
+<p>Todos os direitos reservados.</p>
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

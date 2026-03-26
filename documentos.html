@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Documentos - CAFAB</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* CARDS DOCUMENTOS */
+
+.container-flex-docs{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+margin-top:40px;
+}
+
+.card-documento{
+flex:1 1 calc(33.333% - 20px);
+display:flex;
+flex-direction:column;
+border-left:6px solid #238E68;
+padding:25px;
+border-radius:4px;
+box-shadow:0 2px 5px rgba(0,0,0,0.05);
+text-decoration:none;
+background:#fff;
+transition:0.3s;
+}
+
+.card-documento:hover{
+transform:translateY(-5px);
+}
+
+@media (max-width:992px){
+.card-documento{
+flex:1 1 100%;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="top-bar">
+<div class="container-fluid custom-padding">
+
+<div class="row">
+
+<div class="col-md-6 col-xs-6">
+
+<ul class="list-inline list-redes">
+<li><a href="#" class="animar-salto"><i class="fab fa-instagram fa-2x"></i></a></li>
+<li><a href="#" class="animar-salto"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+</ul>
+
+</div>
+
+<div class="col-md-6 col-xs-6 text-right">
+<a href="mailto:contato@cafav.uema.br" class="btn btn-sm btn-fale animar-salto">Fale Conosco</a>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<nav class="navbar menu-site">
+
+<div class="container">
+
+<div class="row" style="display:flex;align-items:center;padding:15px 0;">
+
+<div class="col-md-3">
+<a href="index.html">
+<img src="logo.png" alt="Logo CAFAB" style="max-width:100%;">
+</a>
+</div>
+
+<div class="col-md-9 text-right">
+
+<ul class="nav navbar-nav navbar-right" style="flex-direction:row;display:flex;">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="sobre.html">Sobre o CAFAB</a></li>
+<li><a href="diretoria.html">Diretoria</a></li>
+<li><a href="eventos.html">Eventos</a></li>
+<li><a href="documentos.html" class="ativo">Documentos úteis</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<h2 class="titulo">
+<span>DOCUMENTOS ÚTEIS</span>
+</h2>
+
+</div>
+
+</header>
+
+
+<section class="documentos" style="padding-bottom:60px;min-height:60vh;">
+
+<div class="container">
+
+<p style="font-size:16px;line-height:1.8;margin-top:30px;">
+Confira abaixo os documentos oficiais do <strong>CAFAB</strong>.
+</p>
+
+<div class="container-flex-docs">
+
+<a href="estatuto.pdf" target="_blank" class="card-documento">
+
+<h4 style="color:#238E68;font-weight:bold;margin-bottom:15px;">
+<i class="fas fa-file-pdf"></i> Estatuto do CAFAB
+</h4>
+
+<p style="color:#666;font-size:14px;line-height:1.6;">
+Documento oficial aprovado em Assembleia Geral que rege as normas do Centro Acadêmico Frei Alberto Beretta.
+</p>
+
+</a>
+
+<a href="#" class="card-documento">
+
+<h4 style="color:#238E68;font-weight:bold;margin-bottom:15px;">
+<i class="fas fa-book-medical"></i> Manual do Calouro
+</h4>
+
+<p style="color:#666;font-size:14px;line-height:1.6;">
+Guia com informações importantes para estudantes ingressantes no curso de Enfermagem da UEMA.
+</p>
+
+</a>
+
+<a href="#" class="card-documento">
+
+<h4 style="color:#238E68;font-weight:bold;margin-bottom:15px;">
+<i class="fas fa-clock"></i> Horas Complementares
+</h4>
+
+<p style="color:#666;font-size:14px;line-height:1.6;">
+Formulário para solicitação de validação de atividades acadêmicas.
+</p>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer style="background-color:#238E68;color:white;padding:40px 0;margin-top:50px;">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-6">
+<p><strong>CAFAB - Centro Acadêmico Frei Alberto Beretta</strong></p>
+<p>Universidade Estadual do Maranhão - UEMA</p>
+<p>Grajaú - MA</p>
+</div>
+
+<div class="col-md-6 text-right">
+<p>E-mail: contato@cafav.uema.br</p>
+<p>Todos os direitos reservados.</p>
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
